@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *LabelBattery;
 
+@property (weak, nonatomic) IBOutlet UITextField *textFieldOrientacion;
 
 
 @end
@@ -79,6 +80,11 @@
 
 }
 
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
+    
+    self.textFieldOrientacion.text = [[[NSNumber  alloc] initWithInteger:fromInterfaceOrientation]  stringValue];
+
+}
 
 
 
